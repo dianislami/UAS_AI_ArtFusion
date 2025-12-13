@@ -87,9 +87,23 @@ def convert_image():
         # Get model name
         model_name = STYLE_MAPPING[style_name]
         
-        # Run style transfer
+        # Run style transfer with proper environment
+        import os
+        import site
+        
+        # Get user site-packages path
+        user_site = '/home/dianislami/.local/lib/python3.10/site-packages'
+        
+        # Set environment for subprocess
+        env = os.environ.copy()
+        pythonpath = env.get('PYTHONPATH', '')
+        if pythonpath:
+            env['PYTHONPATH'] = f"{user_site}:{pythonpath}"
+        else:
+            env['PYTHONPATH'] = user_site
+        
         cmd = [
-            'python', 'test.py',
+            'python3.10', 'test.py',
             '--dataroot', temp_dir,
             '--name', model_name,
             '--model', 'test',
@@ -98,8 +112,8 @@ def convert_image():
         ]
         
         try:
-            # Run the command
-            result = subprocess.run(cmd, capture_output=True, text=True, cwd='./')
+            # Run the command with modified environment
+            result = subprocess.run(cmd, capture_output=True, text=True, cwd='./', env=env)
             
             if result.returncode != 0:
                 print(f"Error running style transfer: {result.stderr}")
@@ -165,4 +179,5 @@ if __name__ == '__main__':
     print("   POST /api/convert - Convert image with selected style")
     print()
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
