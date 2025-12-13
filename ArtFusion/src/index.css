@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* Typography */
+  --font-family: 'Metal', roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight-base: 400;
+
+  /* Colors - Updated with new palette */
+  --bg-color: linear-gradient(135deg, #211008 25%, #311b07 50%, #86613c 95%);
+  --text-color: #F3E3B2;
+  --muted-color: rgba(243, 227, 178, 0.65);
+  --accent: oklch(0.97 0 0);
+  --accent-hover: #AB743C;
+
+  /* New Color Palette - Earth Tones */
+  --primary-dark: #211008;
+  --primary-brown: #754517;
+  --primary-light-brown: #AB743C;
+  --primary-cream: #F3E3B2;
+
+  /* Red accents for alerts/danger */
+  --danger-dark: #310F10;
+  --danger-red: #74070D;
+
+  /* Gradient combinations */
+  --gradient-primary: linear-gradient(135deg, #211008 0%, #754517 50%, #AB743C 100%);
+  --gradient-reverse: linear-gradient(135deg, #AB743C 0%, #754517 50%, #211008 100%);
+  --gradient-horizontal: linear-gradient(90deg, #211008, #754517, #AB743C);
+  --gradient-warm: linear-gradient(135deg, #754517 0%, #AB743C 50%, #F3E3B2 100%);
+
+  /* Background variations */
+  --bg-dark: #211008;
+  --bg-darker: #1a0d06;
+  --bg-brown-dark: rgba(117, 69, 23, 0.2);
+  --bg-brown-light: rgba(171, 116, 60, 0.2);
+
+  /* Text colors */
+  --text-light: #F3E3B2;
+  --text-muted: #AB743C;
+  --text-gradient: linear-gradient(90deg, #AB743C, #754517);
+
+  /* Accent colors for UI elements */
+  --accent-brown: #754517;
+  --accent-light-brown: #AB743C;
+  --accent-cream: #F3E3B2;
+  --accent-danger: #74070D;
+
+  /* Button variables */
+  --btn-padding-y: 0.6rem;
+  --btn-padding-x: 1.5rem;
+  --btn-radius: 30px;
+  --btn-font-size: 1rem;
+  --btn-font-weight: 500;
+  --btn-bg: linear-gradient(135deg, #754517, #AB743C);
+  --btn-bg-hover: linear-gradient(135deg, #AB743C, #F3E3B2);
+  --btn-border-color: transparent;
+
+  /* Accessibility / rendering */
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: var(--line-height);  
+  font-weight: var(--font-weight-base);
+  background: var(--bg-color);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 15px;
+    background: rgba(33, 16, 8, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(171, 116, 60, 0.3);
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
