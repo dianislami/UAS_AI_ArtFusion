@@ -1,18 +1,13 @@
 {
   "version": 2,
+  "buildCommand": "cd ArtFusion && npm ci && npm run build",
+  "outputDirectory": "ArtFusion/dist",
   "builds": [
-    {
-      "src": "ArtFusion/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
     {
       "src": "ArtFusion_Backend/api/**/*.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.9",
+        "runtime": "python3.11",
         "memory": 3008,
         "maxDuration": 30
       }
@@ -24,9 +19,11 @@
       "dest": "/ArtFusion_Backend/api/$1.py"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/ArtFusion/$1"
+      "dest": "/index.html"
     }
-  ],
-  "outputDirectory": "ArtFusion/dist"
+  ]
 }
