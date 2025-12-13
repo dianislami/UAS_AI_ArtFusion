@@ -25,7 +25,7 @@ const styleOptions = [
 ];
 
 const API_BASE_URL = import.meta.env.PROD 
-  ? '/api' 
+  ? 'https://your-railway-app.railway.app/api' 
   : 'http://localhost:5000/api';
 
 const ConvertPage: React.FC = () => {

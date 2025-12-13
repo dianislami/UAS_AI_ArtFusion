@@ -1,6 +1,7 @@
-torch
-torchvision
+torch==2.0.0
+torchvision==0.15.0
 numpy
 pillow
-dominate
-visdom
+flask
+flask-cors
+gunicorn
