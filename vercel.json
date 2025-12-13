@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "cd ArtFusion && npm ci && npm run build",
   "outputDirectory": "ArtFusion/dist",
   "builds": [
     {
