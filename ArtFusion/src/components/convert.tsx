@@ -24,7 +24,9 @@ const styleOptions = [
   }
 ];
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.PROD 
+  ? '/api' 
+  : 'http://localhost:5000/api';
 
 const ConvertPage: React.FC = () => {
   const [selectedStyle, setSelectedStyle] = useState(styleOptions[0].id);
