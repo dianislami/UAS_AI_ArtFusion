@@ -88,7 +88,6 @@ def convert_image():
         model_name = STYLE_MAPPING[style_name]
         
         # Run style transfer with proper environment
-        import os
         import site
         
         # Get user site-packages path
