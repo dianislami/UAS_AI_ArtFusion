@@ -1,0 +1,10 @@
+checkpoints/
+*.pth
+venv/
+uas_ai/
+__pycache__/
+*.pyc
+results/
+test_images/
+temp_*/
+.env

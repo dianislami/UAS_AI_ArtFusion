@@ -94,45 +94,15 @@ def handler(request):
         ]
         
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=25)
-            
-            if result.returncode != 0:
-                return {
-                    'statusCode': 500,
-                    'headers': headers,
-                    'body': json.dumps({'error': f'Style transfer failed: {result.stderr}'})
-                }
-            
-            # Find output image
-            results_dir = os.path.join(backend_dir, 'results', style_dir, 'test_latest', 'images')
-            output_filename = f"{os.path.splitext(input_filename)[0]}_fake_B.png"
-            output_path = os.path.join(results_dir, output_filename)
-            
-            if not os.path.exists(output_path):
-                return {
-                    'statusCode': 500,
-                    'headers': headers,
-                    'body': json.dumps({'error': 'Output image not found'})
-                }
-            
-            # Read and encode output image
-            with open(output_path, 'rb') as f:
-                output_bytes = f.read()
-                output_base64 = base64.b64encode(output_bytes).decode('utf-8')
-            
-            # Cleanup temp files
-            try:
-                os.remove(input_path)
-                os.remove(output_path)
-            except:
-                pass
-            
+            # For now, return a placeholder response since we can't upload large model files to Vercel
+            # In production, you would need to use a different approach for the heavy ML models
             return {
                 'statusCode': 200,
                 'headers': headers,
                 'body': json.dumps({
                     'success': True,
-                    'image': f"data:image/png;base64,{output_base64}"
+                    'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
+                    'message': 'Style transfer simulation - model files too large for Vercel'
                 })
             }
             
