@@ -3,7 +3,7 @@
                batch_size: 1                             
           checkpoints_dir: ./checkpoints                 
                 crop_size: 256                           
-                 dataroot: ./temp_95a54e46-0f44-4b6e-943d-bfe45cbba7f3	[default: None]
+                 dataroot: ./temp_46795741-a7b2-4f41-be29-c19e0d70cb18	[default: None]
              dataset_mode: single                        
                 direction: AtoB                          
           display_winsize: 256                           
