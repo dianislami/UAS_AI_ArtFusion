@@ -10,7 +10,12 @@
     },
     {
       "src": "ArtFusion_Backend/api/**/*.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9",
+        "memory": 3008,
+        "maxDuration": 30
+      }
     }
   ],
   "routes": [
@@ -23,12 +28,5 @@
       "dest": "/ArtFusion/$1"
     }
   ],
-  "functions": {
-    "ArtFusion_Backend/api/*.py": {
-      "runtime": "python3.9",
-      "memory": 3008,
-      "maxDuration": 30
-    }
-  },
   "outputDirectory": "ArtFusion/dist"
 }
