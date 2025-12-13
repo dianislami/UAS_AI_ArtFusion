@@ -9,14 +9,14 @@
       }
     },
     {
-      "src": "ArtFusion_Backend/api/*.py",
+      "src": "api/*.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/ArtFusion_Backend/api/$1"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
