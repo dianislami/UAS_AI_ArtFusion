@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Navbar from '@/components/navbar';
+import Navbar from './navbar';
 import { VscHome, VscArchive, VscAccount, VscFileMedia } from 'react-icons/vsc';
 
 const HeroSection: React.FC = () => {
