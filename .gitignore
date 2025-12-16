@@ -36,4 +36,8 @@ Thumbs.db
 ArtFusion_Backend/results/
 
 # Utility folder (optional - jika tidak mau push)
-ArtFusion_Backend/util/
+ArtFusion_Backend/util/__pycache__/
+*.pyc
+venv/
+results/
+checkpoints/
