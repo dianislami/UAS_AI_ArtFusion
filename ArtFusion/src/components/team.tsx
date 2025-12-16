@@ -12,7 +12,7 @@ const teamMember = [
 		id: 2,
 		nama: 'M. Sidqi Alfareza',
 		npm: 2308107010040,
-		img: './images/ssdq.png',
+		img: './images/sidqi.png',
 	},
 	{
 		id: 3,
