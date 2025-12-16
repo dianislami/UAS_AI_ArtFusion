@@ -23,7 +23,7 @@ ArtFusion adalah aplikasi web yang memungkinkan pengguna untuk mengubah gaya fot
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS v4
 - **Deployment**: Vercel
-- **URL**: [https://art-fusion-pearl.vercel.app](https://art-fusion-pearl.vercel.app)
+- **URL**: [[https://art-fusion-.vercel.app](https://uas-ai-art-fusion.vercel.app/)
 
 ### Backend (Flask + PyTorch)
 - **Framework**: Flask Python API
@@ -224,7 +224,7 @@ npm run dev
 4. Klik "Transform Image"
 5. Download hasil
 
-## 📸 Demo Hasil Transformasi
+## Demo Hasil Transformasi
 
 ### Gaya Van Gogh
 <!-- Masukkan gambar perbandingan Van Gogh di sini -->
@@ -414,7 +414,7 @@ if __name__ == "__main__":
 4. **Convert**: Klik "Transform Image" dan tunggu
 5. **Download**: Unduh hasil yang sudah jadi
 
-## 🔥 API Documentation
+## API Documentation
 
 ### Health Check
 ```http
