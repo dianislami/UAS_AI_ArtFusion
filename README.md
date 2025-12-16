@@ -23,7 +23,7 @@ ArtFusion adalah aplikasi web yang memungkinkan pengguna untuk mengubah gaya fot
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS v4
 - **Deployment**: Vercel
-- **URL**: [[https://art-fusion-.vercel.app](https://uas-ai-art-fusion.vercel.app/)
+- **URL**: [https://art-fusion-.vercel.app](https://uas-ai-art-fusion.vercel.app/)
 
 ### Backend (Flask + PyTorch)
 - **Framework**: Flask Python API
@@ -226,21 +226,20 @@ npm run dev
 
 ## Demo Hasil Transformasi
 
+### Gambar Asli
+<a href="https://ibb.co.com/MxvhDYhw"><img src="https://i.ibb.co.com/DHJbDxbc/test.jpg" alt="test" border="0"></a>
+
 ### Gaya Van Gogh
-<!-- Masukkan gambar perbandingan Van Gogh di sini -->
-![Van Gogh Style Comparison](images/vangogh-before-after.jpg)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/C50Bfz2F/Vincent-Van-Gogh-image.png" alt="Vincent Van Gogh image" border="0"></a>
 
 ### Gaya Monet
-<!-- Masukkan gambar perbandingan Monet di sini -->
-![Monet Style Comparison](images/monet-before-after.jpg)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/R470bmTT/Claude-Monet-image.png" alt="Claude Monet image" border="0"></a>
 
 ### Gaya Cezanne
-<!-- Masukkan gambar perbandingan Cezanne di sini -->
-![Cezanne Style Comparison](images/cezanne-before-after.jpg)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/pjMG3RvX/Paul-Cezanne-image.png" alt="Paul Cezanne image" border="0"></a>
 
 ### Gaya Ukiyo-e
-<!-- Masukkan gambar perbandingan Ukiyo-e di sini -->
-![Ukiyo-e Style Comparison](images/ukiyoe-before-after.jpg)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/prwm1P0C/Ukiyo-e-image.png" alt="Ukiyo e image" border="0"></a>
 
 ## 📂 Struktur Proyek Lengkap
 
