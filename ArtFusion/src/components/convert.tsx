@@ -120,6 +120,11 @@ const ConvertPage: React.FC = () => {
           Convert Gambarmu Di Sini
         </h1>
 
+        {/* Instructions */}
+        <p className="max-w-3xl mx-auto text-center text-base sm:text-lg lg:text-xl mb-12 lg:mb-16 rounded-xl bg-white/10 p-4 lg:p-6 border border-[#F3E3B2]/70 shadow">
+          !!! Disarankan untuk menggunggah gambar dengan rasio 1:1 atau persegi, dan disarankan pula gambar berupa foto pemandangan agar hasil konversi lebih optimal !!!
+        </p>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto w-full">
           {/* Kiri: Pilihan Style */}
           <div className="flex flex-col items-center justify-start gap-4 lg:gap-6 mb-8">
@@ -128,15 +133,15 @@ const ConvertPage: React.FC = () => {
             {/* Divider */}
             <div className="w-full h-px bg-gradient-to-r from-[#F3E3B2]/5 via-[#AB743C]/80 to-[#F3E3B2]/5 mb-2 lg:mb-6"></div>
 
-            <div className="flex flex-col gap-3 lg:gap-4 w-full">
+            <div className="grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:gap-4 w-full">
               {styleOptions.map(style => (
                 <button
                   key={style.id}
-                  className={`flex items-center gap-4 sm:gap-6 lg:gap-12 px-4 sm:px-6 py-3 rounded-xl border-2 transition text-lg sm:text-xl lg:text-2xl shadow-lg hover:cursor-pointer ${selectedStyle === style.id ? 'border-[#F3E3B2] bg-[#F3E3B2]/20 transition-transform duration-500 ease-in-out scale-105' : 'border-transparent bg-white/5'}`}
+                  className={`flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-12 px-4 sm:px-6 py-3 rounded-xl border-2 transition text-sm sm:text-lg lg:text-2xl shadow-lg hover:cursor-pointer ${selectedStyle === style.id ? 'border-[#F3E3B2] bg-[#F3E3B2]/20 transition-transform duration-500 ease-in-out scale-105' : 'border-transparent bg-white/5'}`}
                   onClick={() => setSelectedStyle(style.id)}
                 >
-                  <img src={style.img} alt={style.name} className="w-16 lg:w-24 h-auto object-cover rounded-lg flex-shrink-0" />
-                  <span className="truncate">{style.name}</span>
+                  <img src={style.img} alt={style.name} className="hidden lg:block lg:w-24 h-auto object-cover rounded-lg flex-shrink-0" />
+                  <span className="truncate text-center lg:text-left">{style.name}</span>
                 </button>
               ))}
             </div>
