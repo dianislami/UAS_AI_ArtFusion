@@ -1,42 +1,29 @@
-# 🎨 ArtFusion - AI-Powered Image Style Transfer
+## Kelompok 8
+
+- **Firah Maulidan (2308107010034)**
+- **M. Sidqi Alfareza (2308107010040)**
+- **Nadia Maghdalena (2308107010045)**
+- **Dian Islami (2308107010048)**
+
+# ArtFusion - AI-Powered Image Style Transfer
 
 ArtFusion adalah aplikasi web yang memungkinkan pengguna untuk mengubah gaya foto mereka menggunakan kecerdasan buatan dengan teknik style transfer. Aplikasi ini menggunakan model CycleGAN yang telah dilatih untuk mentransfer gaya artistik dari pelukis terkenal ke foto pengguna.
 
-## 📸 Demo Hasil Transformasi
-
-### Gaya Van Gogh
-<!-- Masukkan gambar perbandingan Van Gogh di sini -->
-![Van Gogh Style Comparison](images/vangogh-before-after.jpg)
-
-### Gaya Monet
-<!-- Masukkan gambar perbandingan Monet di sini -->
-![Monet Style Comparison](images/monet-before-after.jpg)
-
-### Gaya Cezanne
-<!-- Masukkan gambar perbandingan Cezanne di sini -->
-![Cezanne Style Comparison](images/cezanne-before-after.jpg)
-
-### Gaya Ukiyo-e
-<!-- Masukkan gambar perbandingan Ukiyo-e di sini -->
-![Ukiyo-e Style Comparison](images/ukiyoe-before-after.jpg)
-
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - **Style Transfer AI**: Menggunakan model CycleGAN untuk mentransfer gaya artistik
 - **4 Gaya Artistik**: Van Gogh, Monet, Cezanne, dan Ukiyo-e
-- **Interface Modern**: UI/UX yang intuitif dengan design responsif
 - **Upload Mudah**: Drag & drop atau click untuk upload gambar
-- **Preview Real-time**: Melihat hasil transformasi secara langsung
-- **Download Hasil**: Unduh gambar yang telah ditransformasi
+- **Preview Real-time & Download Hasil**: Melihat hasil transformasi & unduh gambar
 
-## 🏗️ Arsitektur Aplikasi
+## Arsitektur Aplikasi
 
 ### Frontend (React + TypeScript)
 - **Framework**: React 18 dengan TypeScript
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS v4
 - **Deployment**: Vercel
-- **URL**: [https://art-fusion-pearl.vercel.app](https://art-fusion-pearl.vercel.app)
+- **URL**: [https://art-fusion-.vercel.app](https://uas-ai-art-fusion.vercel.app/)
 
 ### Backend (Flask + PyTorch)
 - **Framework**: Flask Python API
@@ -45,7 +32,7 @@ ArtFusion adalah aplikasi web yang memungkinkan pengguna untuk mengubah gaya fot
 - **Deployment**: PythonAnywhere
 - **API URL**: `https://arifinn.pythonanywhere.com`
 
-## 📋 Prerequisites
+## Prerequisites
 
 Sebelum memulai, pastikan sistem Anda sudah terinstall:
 
@@ -77,7 +64,7 @@ pip --version
 git --version
 ```
 
-## 🛠️ Setup Lengkap dari Awal
+## Setup Lengkap dari Awal
 
 ### 1. Clone Repository
 
@@ -195,7 +182,7 @@ checkpoints/
     └── test_opt.txt
 ```
 
-## 🔧 Running di Development
+## Running di Development
 
 ### 1. Jalankan Backend
 
@@ -236,6 +223,23 @@ npm run dev
 3. Pilih style
 4. Klik "Transform Image"
 5. Download hasil
+
+## Demo Hasil Transformasi
+
+### Gambar Asli
+<a href="https://ibb.co.com/MxvhDYhw"><img src="https://i.ibb.co.com/DHJbDxbc/test.jpg" alt="test" border="0"></a>
+
+### Gaya Van Gogh
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/C50Bfz2F/Vincent-Van-Gogh-image.png" alt="Vincent Van Gogh image" border="0"></a>
+
+### Gaya Monet
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/R470bmTT/Claude-Monet-image.png" alt="Claude Monet image" border="0"></a>
+
+### Gaya Cezanne
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/pjMG3RvX/Paul-Cezanne-image.png" alt="Paul Cezanne image" border="0"></a>
+
+### Gaya Ukiyo-e
+<a href="https://imgbb.com/"><img src="https://i.ibb.co.com/prwm1P0C/Ukiyo-e-image.png" alt="Ukiyo e image" border="0"></a>
 
 ## 📂 Struktur Proyek Lengkap
 
@@ -324,7 +328,7 @@ ArtFusion-Project/
     └── Procfile                   # Process file untuk deployment
 ```
 
-## 🌐 Deployment Production
+## Deployment Production
 
 ### Deploy Frontend ke Vercel
 
@@ -401,15 +405,15 @@ if __name__ == "__main__":
     application.run()
 ```
 
-## 📚 Cara Penggunaan
+## Penggunaan Web
 
 1. **Buka Aplikasi**: Kunjungi URL deployment atau localhost
 2. **Upload Gambar**: Klik "Choose File" atau drag & drop
 3. **Pilih Style**: Pilih Van Gogh, Monet, Cezanne, atau Ukiyo-e
-4. **Transform**: Klik "Transform Image" dan tunggu
+4. **Convert**: Klik "Transform Image" dan tunggu
 5. **Download**: Unduh hasil yang sudah jadi
 
-## 🔥 API Documentation
+## API Documentation
 
 ### Health Check
 ```http
@@ -450,7 +454,7 @@ Content-Type: multipart/form-data
 }
 ```
 
-## 🧠 Tentang Model AI
+## Tentang Model AI
 
 ArtFusion menggunakan **CycleGAN** (Cycle-Consistent Generative Adversarial Networks):
 
@@ -467,7 +471,7 @@ ArtFusion menggunakan **CycleGAN** (Cycle-Consistent Generative Adversarial Netw
 3. **Post Processing**: Convert kembali ke format normal
 4. **Output**: Gambar dengan style baru
 
-## 🛠️ Development Tips
+## Development Tips
 
 ### Frontend Development:
 ```bash
@@ -496,47 +500,6 @@ curl -X GET http://localhost:5000/api/health
 # Test style transfer
 curl -X POST -F "file=@test.jpg" -F "style=vangogh" http://localhost:5000/api/convert
 ```
-
-### Common Issues & Solutions:
-
-1. **CORS Error**: Pastikan flask-cors terinstall dan dikonfigurasi
-2. **Model Not Found**: Cek path ke folder checkpoints
-3. **Memory Error**: Resize gambar ke ukuran lebih kecil
-4. **Port Already in Use**: Ganti port di konfigurasi
-
-## 👥 Tim Pengembang
-
-- **Lead Developer**: [Nama Anda]
-- **AI Engineer**: [Nama Tim]  
-- **Frontend Developer**: [Nama Tim]
-- **Backend Developer**: [Nama Tim]
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah MIT License.
-
-## 🤝 Kontribusi
-
-1. Fork repository
-2. Create feature branch (`git checkout -b feature/new-feature`)
-3. Commit changes (`git commit -m 'Add new feature'`)
-4. Push branch (`git push origin feature/new-feature`)
-5. Create Pull Request
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues]
-- **Email**: [your-email@domain.com]
-- **Documentation**: [Link to full docs]
-
-## 🔮 Roadmap
-
-- [ ] Tambah gaya artistik baru (Picasso, Da Vinci)
-- [ ] Real-time webcam style transfer
-- [ ] Mobile app (React Native)
-- [ ] Batch processing multiple images
-- [ ] API untuk third-party developers
-- [ ] Performance optimization
 
 ---
 
